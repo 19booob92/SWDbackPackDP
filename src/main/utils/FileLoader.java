@@ -14,7 +14,7 @@ public class FileLoader {
     public static List<String> readFile(String name) throws Exception {
         List<String> lines = new ArrayList<>();
 
-        BufferedReader br = new BufferedReader(new FileReader("file.txt"));
+        BufferedReader br = new BufferedReader(new FileReader(name));
         try {
             String line = br.readLine();
 

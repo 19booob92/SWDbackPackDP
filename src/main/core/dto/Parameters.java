@@ -9,8 +9,8 @@ public class Parameters {
     private int packSize = 0;
     private int itemsAmount = 0;
 
-    private List<String> sizes = new ArrayList<>();
-    private List<String> prices = new ArrayList<>();
+    private List<Integer> sizes = new ArrayList<>();
+    private List<Integer> prices = new ArrayList<>();
 
     public Parameters() {
     }
@@ -36,19 +36,19 @@ public class Parameters {
         this.itemsAmount = itemsAmount;
     }
 
-    public List<String> getSizes() {
+    public List<Integer> getSizes() {
         return sizes;
     }
 
-    public void setSizes(List<String> sizes) {
+    public void setSizes(List<Integer> sizes) {
         this.sizes = sizes;
     }
 
-    public List<String> getPrices() {
+    public List<Integer> getPrices() {
         return prices;
     }
 
-    public void setPrices(List<String> prices) {
+    public void setPrices(List<Integer> prices) {
         this.prices = prices;
     }
 
