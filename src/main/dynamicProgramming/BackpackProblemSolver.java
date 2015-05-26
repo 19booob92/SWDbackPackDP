@@ -16,6 +16,19 @@ public class BackpackProblemSolver {
         matrix = new int[parameters.getItemsAmount() + 1][parameters.getPackSize() + 1];
     }
 
+    public String getInsertetItems(List<Boolean> vector) {
+        StringBuilder result = new StringBuilder();
+        int index = 0;
+        for (Boolean isInserted : vector) {
+            if (isInserted) {
+                result.append(parameters.getItemsNames().get(index));
+                result.append(", ");
+            }
+            index++;
+        }
+        return result.toString();
+    }
+
     private void solveProblem() {
         for (int itemIdx = 1; itemIdx <= parameters.getItemsAmount(); itemIdx++) {
             for (int b = 1; b <= parameters.getPackSize(); b++) {
@@ -43,7 +56,7 @@ public class BackpackProblemSolver {
         Collections.reverse(vector);
 
         printSteps();
-        
+
         return vector;
     }
 

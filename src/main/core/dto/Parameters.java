@@ -3,7 +3,6 @@ package main.core.dto;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Parameters {
 
     private int packSize = 0;
@@ -11,13 +10,22 @@ public class Parameters {
 
     private List<Integer> sizes = new ArrayList<>();
     private List<Integer> prices = new ArrayList<>();
+    private List<String> itemsNames = new ArrayList<>();
 
     public Parameters() {
     }
-    
+
     public Parameters(int packSize, int itemsAmount) {
         this.itemsAmount = itemsAmount;
         this.packSize = packSize;
+    }
+
+    public List<String> getItemsNames() {
+        return itemsNames;
+    }
+
+    public void setItemsNames(List<String> itemsNames) {
+        this.itemsNames = itemsNames;
     }
 
     public int getPackSize() {
@@ -51,6 +59,5 @@ public class Parameters {
     public void setPrices(List<Integer> prices) {
         this.prices = prices;
     }
-
 
 }

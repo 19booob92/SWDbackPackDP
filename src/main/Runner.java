@@ -14,16 +14,19 @@ public class Runner {
         Parameters params;
 
         try {
-            List<String> data = FileLoader.readFile("/home/booob/Documents/workspace-sts-3.5.1.RELEASE/SWDProblemPlecakowy/resources/wagi.txt");
+            List<String> data = FileLoader.readFile("/home/mateusz/Repos/SWDbackPackDP/resources/wagi.txt");
             params = dataProcessor.processData(data);
-          
+
             BackpackProblemSolver solver = new BackpackProblemSolver(params);
 
-            System.out.println(solver.backTracking());
+            List<Boolean> vector = solver.backTracking();
+
+            System.out.println(vector);
+            System.out.println("Przedmioty w plecaku : \n" + solver.getInsertetItems(vector));
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Nie odnaleziono pliku");
             System.err.println(ex);
         }
-        
+
     }
 }
