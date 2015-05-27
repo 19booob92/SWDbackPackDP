@@ -14,8 +14,8 @@ public class InputDataProcessor {
     private static final int LINE_WITH_PRICES_NO = 2;
     private static final int LINE_WITH_ITEMS_NAMES = 3;
 
-    private static final int PACK_SIZE_POSITION = 0;
-    private static final int ITEMS_AMOUNT_POSITION = 1;
+    private static final int PACK_SIZE_POSITION = 1;
+    private static final int ITEMS_AMOUNT_POSITION = 0;
 
     public Parameters processData(List<String> inputData) {
 

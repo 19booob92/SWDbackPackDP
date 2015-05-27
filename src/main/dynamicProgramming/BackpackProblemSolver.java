@@ -34,6 +34,8 @@ public class BackpackProblemSolver {
             for (int b = 1; b <= parameters.getPackSize(); b++) {
                 if (b >= parameters.getSizes().get(itemIdx - 1)) {
                     matrix[itemIdx][b] = Math.max(matrix[itemIdx - 1][b - parameters.getSizes().get(itemIdx - 1)] + parameters.getPrices().get(itemIdx - 1), matrix[itemIdx - 1][b]);
+                } else {
+                    matrix[itemIdx][b] = matrix[itemIdx - 1][b];
                 }
             }
         }
@@ -45,7 +47,7 @@ public class BackpackProblemSolver {
         int b = parameters.getPackSize();
         List<Boolean> vector = new ArrayList<>();
 
-        for (int i = parameters.getItemsAmount() - 1; i > 0; i--) {
+        for (int i = parameters.getItemsAmount(); i > 0; i--) {
             if (matrix[i][b] == matrix[i - 1][b]) {
                 vector.add(false);
             } else {
